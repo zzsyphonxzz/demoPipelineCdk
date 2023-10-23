@@ -11,7 +11,7 @@ export class DemopipelineStack extends cdk.Stack {
       synth: new ShellStep('Synth', {
         // Use a connection created using the AWS console to authenticate to GitHub
         // Other sources are available.
-        input: CodePipelineSource.gitHub('zzsyphonxzz/demoPipelineCdk/', 'main'),
+        input: CodePipelineSource.gitHub('zzsyphonxzz/demoPipelineCdk', 'main'),
         commands: [
           'npm ci',
           'npm run build',
