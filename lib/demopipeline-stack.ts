@@ -12,7 +12,7 @@ export class DemopipelineStack extends cdk.Stack {
         // Use a connection created using the AWS console to authenticate to GitHub
         // Other sources are available.
         input: CodePipelineSource.gitHub('zzsyphonxzz/demoPipelineCdk', 'main', {
-          authentication: cdk.SecretValue.secretsManager('github-token')
+          authentication: cdk.SecretValue.secretsManager('cicd-test')
         }),
         installCommands: [
           'npm install -g aws-cdk'
